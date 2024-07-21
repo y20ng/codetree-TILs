@@ -21,13 +21,13 @@ public class Main {
     }
 
     public static boolean is3Num(int n){
-        if((n / 10 == 3) || (n%10 == 3)){
-            return true;
+        while(n >0){
+            int tmp = n%10;
+            if(tmp == 3 || tmp == 6 || tmp ==9)
+                return true;
+            n/=10;
         }
-        else if((n / 10 == 6) || (n%10 == 6)){
-            return true;
-        }
-        return (n / 10 == 9) || (n%10 == 9);
+        return false;
     }
 
     public static boolean isMagicNumber(int n){
