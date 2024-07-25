@@ -7,7 +7,14 @@ public class Main {
         String str = sc.next();
         int x = sc.nextInt();
 
-        for(int i = 0; i < x; i++)
+        if(str.length() < x){
+            for(int i = 0; i < str.length(); i++)
             System.out.printf("%c",str.charAt(str.length()-1 -i));
+        }
+        else{
+            for(int i = 0; i < x; i++)
+            System.out.printf("%c",str.charAt(str.length()-1 -i));
+        }
+        
     }
 }
